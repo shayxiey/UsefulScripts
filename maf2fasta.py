@@ -89,6 +89,8 @@ This program is used to convert MAF file to Fasta file.
 If multiple blocks recorded in MAF file, the output will be splited.
 Example:
 python3 maf2fa.py -i maf_file -o fasta_dir
+-------------------------------------------------
+Written by Yulong Xie, 2024/06/13 contact at xieyulong@zju.edu.cn
 
 ''', formatter_class=argparse.RawTextHelpFormatter)
 parser.add_argument('-i', '--InputMAFFile', type=str,help="Your MAF file.")
