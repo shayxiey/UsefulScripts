@@ -66,9 +66,9 @@ def modify_ctl(ctl_template,seqfile,treefile,wz,node):
     return (ctl0,ctl2)
 
 def write_paml_shell(para_dic,ctl_template,wz): #传入参数字典和ctl文件模版以及工作区地址
-    shell_l = []
     for node, paras in para_dic.items(): #假设前期已经完成了基因筛选工作，那么我们只需要调整ctl文件并检查输入是否完整
         # 写入paml ctl文件
+        shell_l = []
         for gene_p in paras[0]:
             if not os.path.exists(gene_p):
                 continue
