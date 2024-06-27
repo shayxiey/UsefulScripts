@@ -57,10 +57,10 @@ def modify_ctl(ctl_template,seqfile,treefile,wz,node):
     gene = os.path.basename(seqfile).split('_')[1].split('.')[0]
     modified_ctl = modifer("treefile = ",treefile[0],ctl_template)
     modified_ctl = modifer("seqfile = ",seqfile,ctl_template)
-    return_ctl0 = modifer("model = ",'model = 0',modified_ctl)
+    return_ctl0 = modifer("model = ",'0',modified_ctl)
     return_ctl0 = modifer("outfile = ",os.path.join(opath,f"{gene}.{node}.0.out"),return_ctl0)
     ctl0 = '\n'.join(return_ctl0)
-    return_ctl2 = modifer("model = ",'model = 2',modified_ctl)
+    return_ctl2 = modifer("model = ",'2',modified_ctl)
     return_ctl2 = modifer("outfile = ",os.path.join(opath,f"{gene}.{node}.2.out"),return_ctl2)
     ctl2 = '\n'.join(return_ctl2)
     return (ctl0,ctl2)
