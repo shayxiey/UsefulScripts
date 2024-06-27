@@ -91,7 +91,7 @@ def write_paml_shell(para_dic,ctl_template,wz): #传入参数字典和ctl文件�
             fo.write('\n'.join(shell_l))
         sba_l.append(os.path.join(wz,"shells",f"{node}.sh"))
 
-def run_LRT(out_dir,op_file,node):
+def run_LRT(out_dir,op_file):
     outs = [file for file in os.listdir(out_dir)]
     result_l = ["gene\tomega_H0\tlog_likelihood_H0\tdf_H0\tomega_H0\tlog_likelihood_H1\tdf_H1\tLRT\tAcptHypo"]
     gene_l = []
@@ -101,18 +101,20 @@ def run_LRT(out_dir,op_file,node):
             gene_l.append(gene)
         else:
             continue
-        shell_command = f"grep lnL {os.path.join(out_dir,node,gene)}.*|awk -F':|)|"+"\\0' '{print $4,$6}' |awk '{print $1,$2}'" 
+        shell_command = f"grep lnL {os.path.join(out_dir,gene)}.*|awk -F':|)|"+"\\0' '{print $4,$6}' |awk '{print $1,$2}'" 
         op_lines = subprocess.run(shell_command, shell=True, check=True, stdout=subprocess.PIPE, text=True)
         data = op_lines.stdout.strip().split("\n")
+        # pdb.set_trace()
         if len(data) >= 2:
             df1,log_likelihood_1 = data[0].split(' ')[0],data[0].split(' ')[1]
             df2,log_likelihood_2 = data[1].split(' ')[0],data[1].split(' ')[1]
         else:
             continue
-        shell_command = f"grep omega {os.path.join(out_dir,gene)}.*.0.out|awk -F':| '"+" '{print $6}'" 
+        shell_command = f"grep omega {os.path.join(out_dir,gene)}.*.0.out" 
         return_pipe = subprocess.run(shell_command, shell=True, check=True, stdout=subprocess.PIPE, text=True)
+        # pdb.set_trace()
         omega_H0 = return_pipe.stdout.strip().split()[-1]
-        shell_command = f"grep omega {os.path.join(out_dir,gene)}.*.2.out|awk -F':| '"+" '{print $6}'" 
+        shell_command = f"grep \(dN\/dS\) {os.path.join(out_dir,gene)}.*.2.out" 
         return_pipe = subprocess.run(shell_command, shell=True, check=True, stdout=subprocess.PIPE, text=True)
         omega_H1 = return_pipe.stdout.strip().split()[-1]
         result = calculate_p_value(float(log_likelihood_1), float(log_likelihood_2), float(df1), float(df2))
@@ -124,7 +126,7 @@ def run_LRT(out_dir,op_file,node):
     return_data = '\n'.join(result_l)
     with open(op_file,'w')as fo:
         fo.write(return_data)
-
+        
 
 parser = argparse.ArgumentParser(description='''\
 This program is used to auto run PAML codeml for neutual selection.
