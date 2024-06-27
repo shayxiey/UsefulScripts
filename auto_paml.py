@@ -1,4 +1,5 @@
 ######  该脚本用于将你已经提取好的基因群批量进行paml的codeml计算， 请配合LRT_test.py和sbatch-submit.py使用。  ######
+#### 使用前，请检查三个脚本的文件存储位置是否正确。需要提供codeml模版的绝对路径。 ####
 #### 如果有任何问题，请联系 xieyulong@zju.edu.cn ####
 import os
 import subprocess
