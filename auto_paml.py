@@ -93,7 +93,7 @@ def write_paml_shell(para_dic,ctl_template,wz): #传入参数字典和ctl文件�
 
 def run_LRT(out_dir,op_file,node):
     outs = [file for file in os.listdir(out_dir)]
-    result_l = ["gene\tlog_likelihood_H0\tdf_H0\tlog_likelihood_H1\tdf_H1\tLRT\tAcptHypo"]
+    result_l = ["gene\tomega_H0\tlog_likelihood_H0\tdf_H0\tomega_H0\tlog_likelihood_H1\tdf_H1\tLRT\tAcptHypo"]
     gene_l = []
     for file in outs:
         gene = file.split('.')[0]
@@ -108,13 +108,19 @@ def run_LRT(out_dir,op_file,node):
             df1,log_likelihood_1 = data[0].split(' ')[0],data[0].split(' ')[1]
             df2,log_likelihood_2 = data[1].split(' ')[0],data[1].split(' ')[1]
         else:
-            raise ValueError("Insufficient data returned from the command.")
+            continue
+        shell_command = f"grep omega {os.path.join(out_dir,gene)}.*.0.out|awk -F':| '"+" '{print $6}'" 
+        return_pipe = subprocess.run(shell_command, shell=True, check=True, stdout=subprocess.PIPE, text=True)
+        omega_H0 = return_pipe.stdout.strip().split()[-1]
+        shell_command = f"grep omega {os.path.join(out_dir,gene)}.*.2.out|awk -F':| '"+" '{print $6}'" 
+        return_pipe = subprocess.run(shell_command, shell=True, check=True, stdout=subprocess.PIPE, text=True)
+        omega_H1 = return_pipe.stdout.strip().split()[-1]
         result = calculate_p_value(float(log_likelihood_1), float(log_likelihood_2), float(df1), float(df2))
         if result>0.05:
             AcptHypo = 'H1'
         else:
             AcptHypo = 'H0'
-        result_l.append('\t'.join([gene,log_likelihood_1, df1, log_likelihood_2, df2, str(result),AcptHypo]))
+        result_l.append('\t'.join([gene,omega_H0,log_likelihood_1, df1,omega_H1,log_likelihood_2, df2, str(result),AcptHypo]))
     return_data = '\n'.join(result_l)
     with open(op_file,'w')as fo:
         fo.write(return_data)
