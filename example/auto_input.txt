@@ -1,0 +1,41 @@
+gene:
+  /share/home/zhanglab/user/xieyulong/00.data/02.discordance/cds/alns/42/GALGAL_R10248.c12.ginsi.42.fa
+  /share/home/zhanglab/user/xieyulong/00.data/02.discordance/cds/alns/42/GALGAL_R10422.c12.ginsi.42.fa
+  /share/home/zhanglab/user/xieyulong/00.data/02.discordance/cds/alns/42/GALGAL_R10239.c12.ginsi.42.fa
+  /share/home/zhanglab/user/xieyulong/00.data/02.discordance/cds/alns/42/GALGAL_R09012.c12.ginsi.42.fa
+  /share/home/zhanglab/user/xieyulong/00.data/02.discordance/cds/alns/42/GALGAL_R08230.c12.ginsi.42.fa
+  /share/home/zhanglab/user/xieyulong/00.data/02.discordance/cds/alns/42/GALGAL_R08438.c12.ginsi.42.fa
+  /share/home/zhanglab/user/xieyulong/00.data/02.discordance/cds/alns/42/GALGAL_R08416.c12.ginsi.42.fa
+  /share/home/zhanglab/user/xieyulong/00.data/02.discordance/cds/alns/42/GALGAL_R10236.c12.ginsi.42.fa
+  /share/home/zhanglab/user/xieyulong/00.data/02.discordance/cds/alns/42/GALGAL_R08412.c12.ginsi.42.fa
+  /share/home/zhanglab/user/xieyulong/00.data/02.discordance/cds/alns/42/GALGAL_R10747.c12.ginsi.42.fa
+  /share/home/zhanglab/user/xieyulong/00.data/02.discordance/cds/alns/42/GALGAL_R10249.c12.ginsi.42.fa
+  /share/home/zhanglab/user/xieyulong/00.data/02.discordance/cds/alns/42/GALGAL_R10911.c12.ginsi.42.fa
+  /share/home/zhanglab/user/xieyulong/00.data/02.discordance/cds/alns/42/GALGAL_R08578.c12.ginsi.42.fa
+  /share/home/zhanglab/user/xieyulong/00.data/02.discordance/cds/alns/42/GALGAL_R17329.c12.ginsi.42.fa
+  /share/home/zhanglab/user/xieyulong/00.data/02.discordance/cds/alns/42/GALGAL_R09016.c12.ginsi.42.fa
+  /share/home/zhanglab/user/xieyulong/00.data/02.discordance/cds/alns/42/GALGAL_R10743.c12.ginsi.42.fa
+  /share/home/zhanglab/user/xieyulong/00.data/02.discordance/cds/alns/42/GALGAL_R10746.c12.ginsi.42.fa
+  /share/home/zhanglab/user/xieyulong/00.data/02.discordance/cds/alns/42/GALGAL_R10754.c12.ginsi.42.fa
+  /share/home/zhanglab/user/xieyulong/00.data/02.discordance/cds/alns/42/GALGAL_R08410.c12.ginsi.42.fa
+  /share/home/zhanglab/user/xieyulong/00.data/02.discordance/cds/alns/42/GALGAL_R09022.c12.ginsi.42.fa
+  /share/home/zhanglab/user/xieyulong/00.data/02.discordance/cds/alns/42/GALGAL_R10245.c12.ginsi.42.fa
+  /share/home/zhanglab/user/xieyulong/00.data/02.discordance/cds/alns/42/GALGAL_R08070.c12.ginsi.42.fa
+  /share/home/zhanglab/user/xieyulong/00.data/02.discordance/cds/alns/42/GALGAL_R08419.c12.ginsi.42.fa
+  /share/home/zhanglab/user/xieyulong/00.data/02.discordance/cds/alns/42/GALGAL_R09907.c12.ginsi.42.fa
+  /share/home/zhanglab/user/xieyulong/00.data/02.discordance/cds/alns/42/GALGAL_R10247.c12.ginsi.42.fa
+  /share/home/zhanglab/user/xieyulong/00.data/02.discordance/cds/alns/42/GALGAL_R09021.c12.ginsi.42.fa
+  /share/home/zhanglab/user/xieyulong/00.data/02.discordance/cds/alns/42/GALGAL_R08530.c12.ginsi.42.fa
+  /share/home/zhanglab/user/xieyulong/00.data/02.discordance/cds/alns/42/GALGAL_R09005.c12.ginsi.42.fa
+  /share/home/zhanglab/user/xieyulong/00.data/02.discordance/cds/alns/42/GALGAL_R10753.c12.ginsi.42.fa
+  /share/home/zhanglab/user/xieyulong/00.data/02.discordance/cds/alns/42/GALGAL_R10752.c12.ginsi.42.fa
+  /share/home/zhanglab/user/xieyulong/00.data/02.discordance/cds/alns/42/GALGAL_R09014.c12.ginsi.42.fa
+  /share/home/zhanglab/user/xieyulong/00.data/02.discordance/cds/alns/42/GALGAL_R08467.c12.ginsi.42.fa
+  /share/home/zhanglab/user/xieyulong/00.data/02.discordance/cds/alns/42/GALGAL_R10745.c12.ginsi.42.fa
+  /share/home/zhanglab/user/xieyulong/00.data/02.discordance/cds/alns/42/GALGAL_R09010.c12.ginsi.42.fa
+  /share/home/zhanglab/user/xieyulong/00.data/02.discordance/cds/alns/42/GALGAL_R10244.c12.ginsi.42.fa
+  /share/home/zhanglab/user/xieyulong/00.data/02.discordance/cds/alns/42/GALGAL_R09008.c12.ginsi.42.fa
+namelist:
+  /share/home/zhanglab/user/xieyulong/00.data/02.discordance/cds/sp_lsts/42.splst
+tree:
+  /share/home/zhanglab/user/xieyulong/00.data/02.discordance/cds/trees/42.mapping.new
