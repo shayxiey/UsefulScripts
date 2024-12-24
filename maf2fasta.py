@@ -22,7 +22,7 @@ def record_maf_optimized(fi, opath):
                     last_orth.alns[key] = '-' * fill_length + seq
             last_orth.len += current_orth.len
             
-             # 然后检查last_orth中是否存在current_orth没有的键，并进行填充
+            # 然后检查last_orth中是否存在current_orth没有的键，并进行填充
             for key in last_orth.alns.keys():
                 if key not in current_orth.alns:
                     fill_length = current_orth.len
